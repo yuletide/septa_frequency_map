@@ -1,0 +1,1 @@
+![img](https://github.com/yuletide/septa_frequency_map/raw/master/.thumb.png)
