@@ -20,19 +20,19 @@ Map {
   line-opacity: 0.3;
   /* quintiles */
   [tripcount <= 72.4] {
-      line-color: #100;
+      line-color: spin(@base_line_color, 10%);
   }
   [tripcount > 72.4][tripcount <= 147.8] {
-      line-color: #300;
+      line-color: spin(@base_line_color, 20%);
   }
   [tripcount > 147.8][tripcount <= 276.4] {
-      line-color: #500;
+      line-color: spin(@base_line_color, 30%);
   }
   [tripcount > 276.4][tripcount <= 413.4] {
-      line-color: #700;
+      line-color: spin(@base_line_color, 40%);
   }
   [tripcount > 413.4] {
-      line-color: #900;
+      line-color: spin(@base_line_color, 50%);
   }
     
   
