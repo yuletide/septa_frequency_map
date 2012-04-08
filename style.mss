@@ -11,15 +11,15 @@ Map {
   }
   polygon-fill: #fff;
 }
-@base_line_color: darken(#fa00ff,@lighten_step*6);
+@base_line_color: darken(#fa00ff,30%);
 @base_line_width: 1;
-@base_line_width_add: 0.3;
-@lighten_step: 4%;
+@base_line_width_add: 0.15;
+@lighten_step: 14%;
 #bus_routes {
   line-color: #fa00ff;
   line-width: 1;
   line-join: bevel;
-  line-opacity: .8;
+  line-opacity: .6;
   /* quintiles */
   [tripcount > 413.4] {
       line-color: lighten(@base_line_color, @lighten_step*5);
