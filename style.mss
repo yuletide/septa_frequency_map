@@ -11,29 +11,40 @@ Map {
   }
   polygon-fill: #fff;
 }
-@base_line_color: #f00;
-
+@base_line_color: #b3b;
+@base_line_width: 1;
+@base_line_width_add: 0.5;
+@spin_step: 10%;
 #bus_routes {
   line-color: #fa00ff;
-  line-width: 2;
-  line-join: round;
-  line-opacity: 0.3;
+  line-width: 1;
+  line-join: bevel;
+  line-opacity: 0.5;
   /* quintiles */
-  [tripcount <= 72.4] {
-      line-color: spin(@base_line_color, 10%);
-  }
-  [tripcount > 72.4][tripcount <= 147.8] {
-      line-color: spin(@base_line_color, 20%);
-  }
-  [tripcount > 147.8][tripcount <= 276.4] {
-      line-color: spin(@base_line_color, 30%);
+  [tripcount > 413.4] {
+      line-color: spin(@base_line_color, @spin_step*5);
+      line-width: @base_line_width + @base_line_width_add * 5;
   }
   [tripcount > 276.4][tripcount <= 413.4] {
-      line-color: spin(@base_line_color, 40%);
+      line-color: spin(@base_line_color, @spin_step*4);
+      line-width: @base_line_width + @base_line_width_add * 4;
   }
-  [tripcount > 413.4] {
-      line-color: spin(@base_line_color, 50%);
+  [tripcount > 147.8][tripcount <= 276.4] {
+      line-color: spin(@base_line_color, @spin_step*3);
+      line-width: @base_line_width + @base_line_width_add * 3;
   }
+  [tripcount > 72.4][tripcount <= 147.8] {
+      line-color: spin(@base_line_color, @spin_step*2);
+      line-width: @base_line_width + @base_line_width_add * 2;
+  }
+  [tripcount <= 72.4] {
+      line-color: spin(@base_line_color, @spin_step*1);
+      line-width: @base_line_width;
+  }
+
+
+
+
     
   
 }
