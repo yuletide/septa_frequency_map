@@ -23,10 +23,10 @@
       "geometry": "multilinestring",
       "Datasource": {
         "type": "postgis",
-        "table": "public.routes",
+        "table": "routes_by_trip",
         "extent": "",
         "key_field": "",
-        "geometry_field": "",
+        "geometry_field": "geom",
         "host": "localhost",
         "user": "postgres",
         "dbname": "septa_bus",
