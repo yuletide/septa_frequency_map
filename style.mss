@@ -111,6 +111,12 @@ Map {
      }
   }
 
+[tripcount <= 69.5]{ line-color: rgb(215,25,28); }
+[tripcount > 69.5][tripcount <= 122.67]{ line-color: rgb(245,144,83); }
+[tripcount > 122.67][tripcount <= 225.5]{ line-color: rgb(254,222,154); }
+[tripcount > 225.5][tripcount <= 310.67]{ line-color: rgb(219,239,157); }
+[tripcount > 310.67][tripcount <= 461.17]{ line-color: rgb(137,203,97); }
+[tripcount > 461.17]{ line-color: rgb(26,150,65); }
 
 
 
