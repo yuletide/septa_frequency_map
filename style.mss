@@ -43,29 +43,72 @@ Map {
   }
   
   [zoom>=12] {
-    [tripcount > 413.4] {
-        line-color: lighten(@base_line_color, @lighten_step*5);
-        line-width: @base_line_width + (@base_line_width_add * 1.5) * 5;
+        [tripcount > 413.4] {
+            line-color: lighten(@base_line_color, @lighten_step*5);
+            line-width: @base_line_width + (@base_line_width_add * 1.5) * 5;
+        }
+        [tripcount > 276.4][tripcount <= 413.4] {
+            line-color: lighten(@base_line_color, @lighten_step*4);
+            line-width: @base_line_width + (@base_line_width_add * 1.5) * 4;
+        }
+        [tripcount > 147.8][tripcount <= 276.4] {
+            line-color: lighten(@base_line_color, @lighten_step*3);
+            line-width: @base_line_width + (@base_line_width_add * 1.5) * 3;
+        }
+        [tripcount > 72.4][tripcount <= 147.8] {
+            line-color: lighten(@base_line_color, @lighten_step*2);
+            line-width: @base_line_width + (@base_line_width_add * 1.5) * 2;
+        }
+        [tripcount <= 72.4] {
+            line-color: lighten(@base_line_color, @lighten_step*1);
+            line-width: @base_line_width*1.5;
+        }
     }
-    [tripcount > 276.4][tripcount <= 413.4] {
-        line-color: lighten(@base_line_color, @lighten_step*4);
-        line-width: @base_line_width + (@base_line_width_add * 1.5) * 4;
-    }
-    [tripcount > 147.8][tripcount <= 276.4] {
-        line-color: lighten(@base_line_color, @lighten_step*3);
-        line-width: @base_line_width + (@base_line_width_add * 1.5) * 3;
-    }
-    [tripcount > 72.4][tripcount <= 147.8] {
-        line-color: lighten(@base_line_color, @lighten_step*2);
-        line-width: @base_line_width + (@base_line_width_add * 1.5) * 2;
-    }
-    [tripcount <= 72.4] {
-        line-color: lighten(@base_line_color, @lighten_step*1);
-        line-width: @base_line_width*1.5;
-    }
+    [zoom>=13] {
+       [tripcount > 413.4] {
+           line-color: lighten(@base_line_color, @lighten_step*5);
+           line-width: @base_line_width + (@base_line_width_add * 2) * 5;
+       }
+       [tripcount > 276.4][tripcount <= 413.4] {
+           line-color: lighten(@base_line_color, @lighten_step*4);
+           line-width: @base_line_width + (@base_line_width_add * 2) * 4;
+       }
+       [tripcount > 147.8][tripcount <= 276.4] {
+           line-color: lighten(@base_line_color, @lighten_step*3);
+           line-width: @base_line_width + (@base_line_width_add * 2) * 3;
+       }
+       [tripcount > 72.4][tripcount <= 147.8] {
+           line-color: lighten(@base_line_color, @lighten_step*2);
+           line-width: @base_line_width + (@base_line_width_add * 2) * 2;
+       }
+       [tripcount <= 72.4] {
+           line-color: lighten(@base_line_color, @lighten_step*1);
+           line-width: @base_line_width*2;
+       }  
   
   
-  
+  }
+  [zoom>=14] {
+     [tripcount > 413.4] {
+         line-color: lighten(@base_line_color, @lighten_step*5);
+         line-width: @base_line_width + (@base_line_width_add * 3) * 5;
+     }
+     [tripcount > 276.4][tripcount <= 413.4] {
+         line-color: lighten(@base_line_color, @lighten_step*4);
+         line-width: @base_line_width + (@base_line_width_add * 3) * 4;
+     }
+     [tripcount > 147.8][tripcount <= 276.4] {
+         line-color: lighten(@base_line_color, @lighten_step*3);
+         line-width: @base_line_width + (@base_line_width_add * 3) * 3;
+     }
+     [tripcount > 72.4][tripcount <= 147.8] {
+         line-color: lighten(@base_line_color, @lighten_step*2);
+         line-width: @base_line_width + (@base_line_width_add * 3) * 2;
+     }
+     [tripcount <= 72.4] {
+         line-color: lighten(@base_line_color, @lighten_step*1);
+         line-width: @base_line_width*3;
+     }
   }
 
 
