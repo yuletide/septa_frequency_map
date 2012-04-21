@@ -12,8 +12,8 @@
   ],
   "format": "png",
   "interactivity": false,
-  "minzoom": 0,
-  "maxzoom": 12,
+  "minzoom": 9,
+  "maxzoom": 14,
   "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
   "Stylesheet": [
     "style.mss"
@@ -34,11 +34,22 @@
         "project": "septa",
         "srs": null
       },
-      "id": "bus_routes",
+      "id": "bus_routes_",
       "class": "route",
       "srs-name": "WGS84",
       "srs": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs",
-      "name": "bus_routes"
+      "name": "bus_routes_"
+    },
+    {
+      "geometry": "multilinestring",
+      "id": "bus_routes_sum",
+      "class": "route",
+      "Datasource": {
+        "file": "/Users/ayule/data/septa_gtfs/routes_by_trip_intersect_wm/routes_by_trip_intersect_wm.shp"
+      },
+      "srs-name": "autodetect",
+      "srs": "",
+      "name": "bus_routes_sum"
     }
   ],
   "name": "septa frequency map",
